@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+label {
+    font-weight: bold;
+    color: #555;
+}
+
+textarea, input[type="text"], input[type="file"], button {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 10px 0 20px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+.radio-group {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.radio-group label {
+    display: flex;
+    flex-direction: column; /* Tempatkan label di atas radio button */
+    align-items: center; /* Pusatkan radio button dan label */
+    flex: 1; /* Membuat label mengambil ruang yang sama */
+    text-align: center; /* Pusatkan teks di dalam label */
+}
+
+.radio-group input[type="radio"] {
+    margin-top: 5px; /* Beri jarak antara label dan radio button */
+}
+
+.button-group {
+    display: flex; /* Membuat elemen dalam satu baris */
+    justify-content: space-between; /* Mengatur jarak antara tombol */
+    gap: 10px; /* Memberi jarak antar tombol */
+}
+
+.button-group button {
+    flex: 1; /* Membuat tombol mengambil ruang yang sama */
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-group button:hover {
+    background-color: #0056b3;
+}
+
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.result {
+    background-color: #e9ecef;
+    padding: 15px;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+.result p {
+    font-size: 18px;
+    color: #333;
+}
+

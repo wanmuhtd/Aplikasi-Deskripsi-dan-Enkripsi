@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enkripsi & Dekripsi Kriptografi</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Enkripsi & Dekripsi Kriptografi</h1>
+        <p style="font-size: 16px; text-align: center;">4611422013 - Arwan Muhtada</p>
+
+        <form method="POST" enctype="multipart/form-data">
+            <label for="text">Masukkan Teks:</label><br>
+            <textarea id="text" name="text" rows="4" cols="50">{{ input_text }}</textarea><br><br>
+
+            <label for="file">Atau Unggah File (.txt):</label><br>
+            <input type="file" id="file" name="file" accept=".txt"><br><br>
+
+            <button type="submit" name="action" value="load_text">Muat Teks</button>
+            <br><br>
+
+            <label for="key">Masukkan Kunci (min 12 karakter):</label><br>
+            <input type="text" id="key" name="key" value="{{ key }}" required><br><br>
+
+            <label for="method">Pilih Metode:</label><br>
+            <div class="radio-group">
+                <label for="vigenere">Vigenere
+                    <input type="radio" id="vigenere" name="method" value="vigenere" {% if selected_method == 'vigenere' %}checked{% endif %}>
+                </label>
+
+                <label for="playfair">Playfair
+                    <input type="radio" id="playfair" name="method" value="playfair" {% if selected_method == 'playfair' %}checked{% endif %}>
+                </label>
+
+                <label for="hill">Hill
+                    <input type="radio" id="hill" name="method" value="hill" {% if selected_method == 'hill' %}checked{% endif %}>
+                </label>
+            </div>
+
+            <div class="button-group">
+                <button type="submit" name="action" value="encrypt">Enkripsi</button>
+                <button type="submit" name="action" value="decrypt">Dekripsi</button>
+            </div>
+        </form>
+
+        {% if result %}
+        <div class="result">
+            <h2>Hasil:</h2>
+            <p>{{ result }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
